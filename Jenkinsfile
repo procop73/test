@@ -33,7 +33,7 @@ node {
             app.push("latest")
 	
         }
-		sh 'docker stop  procop73/hellonode'
+		sh 'docker stop  procop73/hellonode' || true
 		sh 'docker run -it -p 8000:8000  procop73/hellonode'
     }
 }
