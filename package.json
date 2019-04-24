@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "forever start main.js"
+    "start": "nohup node main.js & exit"
   },
   "repository": {
     "type": "git",
