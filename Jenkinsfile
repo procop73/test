@@ -31,6 +31,9 @@ node {
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
+	
         }
+		sh 'docker stop  procop73/hellonode'
+		sh 'docker run -it -p 8000:8000  procop73/hellonode'
     }
 }
