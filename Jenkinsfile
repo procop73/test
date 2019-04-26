@@ -34,6 +34,6 @@ node {
 	
         }
 /*		sh 'docker stop  procop73/hellonode' || true */
-		sh 'docker start node || docker stop node && docker start node'
+		sh 'docker stop node && docker run --name node -d -p 8000:8000 --restart always   procop73/hellonode'
     }
 }
